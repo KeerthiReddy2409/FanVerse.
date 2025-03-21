@@ -1,0 +1,769 @@
+/* Refined Dark Gold Theme with Improved Contrast */
+:root {
+  /* Base Colors */
+  --gold: #C7AE6A;
+  --black: #000000;
+  --light-gold: #d5c28f;
+  --dark-gold: #b99a45;
+  --dark-gray: #1a1a1a;
+  --medium-gray: #222222;
+  --light-gray: #333333;
+  --off-white: #f0eadb; /* Brightened for better contrast */
+  
+  /* Functional Colors */
+  --primary-color: var(--gold);
+  --secondary-color: var(--light-gold);
+  --background-color: var(--dark-gray);
+  --card-background: var(--medium-gray);
+  --text-color: #ffffff; /* Pure white for maximum contrast */
+  --muted-text: #cccccc; /* Lightened from #bbbbbb */
+  --border-radius: 0.5rem;
+  --gold-gradient: linear-gradient(135deg, var(--dark-gold), var(--gold), var(--light-gold));
+  --dark-gradient: linear-gradient(to bottom, var(--black), var(--dark-gray));
+  --muted-text:var(--dark-gold);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  /* color: var(--off-white); */
+  color: var(--primary-color);
+}
+
+/* Navbar Styles */
+.custom-navbar {
+  background: var(--black);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(199, 174, 106, 0.3);
+}
+
+.custom-navbar .navbar-brand {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.custom-navbar .nav-link {
+  color: var(--off-white);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: var(--gold);
+  background-color: rgba(0, 0, 0, 0.5); /* Darker background for better contrast with gold text */
+  border-radius: var(--border-radius);
+}
+
+/* Card Styles with Better Contrast */
+.card {
+  background-color: var(--card-background);
+  border: none;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--gold);
+}
+
+.card-title {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.card-text {
+  color: var(--text-color); /* Changed from muted-text to text-color for better visibility */
+}
+
+/* Buttons with Better Contrast */
+.btn-primary {
+  background: var(--gold);
+  color: var(--black); /* Black text on gold background has excellent contrast */
+  font-weight: 700; /* Increased from 600 for better visibility */
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold);
+  font-weight: 700; /* Increased from 600 */
+  border: 2px solid var(--gold);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(199, 174, 106, 0.2); /* Increased opacity for better visibility */
+  color: var(--light-gold);
+  transform: translateY(-2px);
+}
+
+/* Newsletter Section with Better Contrast */
+.newsletter-section {
+  background: var(--black);
+  border-top: 4px solid var(--gold);
+  padding: 4rem 0;
+}
+
+.newsletter-section h3 {
+  color: var(--gold);
+}
+
+.newsletter-section p {
+  color: var(--text-color); /* Ensuring paragraph text is visible */
+}
+
+.newsletter-section .form-control {
+  background-color: rgba(255, 255, 255, 0.15); /* Lightened background */
+  border: 1px solid rgba(199, 174, 106, 0.3);
+  color: var(--text-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+}
+
+.newsletter-section .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Lighter placeholder text */
+}
+
+/* Footer with Better Contrast */
+.footer {
+  background-color: var(--black);
+  padding: 4rem 0 2rem;
+  color: var(--muted-text);
+}
+
+.footer h5 {
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.footer ul li a {
+  color: var(--muted-text);
+  transition: all 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: var(--light-gold); /* Lightened from gold for better visibility */
+  text-decoration: none;
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background-color: rgba(199, 174, 106, 0.2); /* Increased opacity */
+  border-radius: 50%;
+  color: var(--gold);
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Timeline with Better Contrast */
+.timeline-date {
+  position: absolute;
+  font-weight: 700;
+  color: var(--black);
+  background-color: var(--gold);
+  left: 10%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content {
+  padding: 1.5rem;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-left: 3px solid var(--gold);
+  color: var(--text-color); /* Ensuring content text is visible */
+}
+
+/* Hover Effects for Cards */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background-color: var(--light-gray); /* Slightly lighter on hover for visual feedback */
+}
+
+/* Section Styles */
+.section-title {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
+}
+
+/* Hero Section */
+.hero-section {
+  background: var(--dark-gradient);
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 0;
+  border-bottom: 4px solid var(--gold);
+}
+
+/* Hero Section Heading */
+.hero-section h1 {
+  color: var(--gold);
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); /* Enhanced text shadow for better readability */
+}
+
+/* Hero Section Paragraph */
+.hero-section p {
+  color: var(--off-white); /* Using off-white instead of potentially low-contrast color */
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Subtle text shadow for readability */
+}
+
+/* Carousel Styling */
+#heroCarousel {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-item img {
+  height: 80vh; /* Adjust height */
+  object-fit:contain; /* Ensures images fit nicely */
+  filter: brightness(80%); /* Darkens images slightly for text contrast */
+  opacity: 0.5;
+}
+
+/* Centered Caption */
+.carousel-caption {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  width: 80%;
+}
+
+/* Carousel Heading */
+.carousel-caption h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--gold); /* Gold text */
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Carousel Paragraph */
+.carousel-caption p {
+  font-size: 1.3rem;
+  color: var(--off-white);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Carousel Buttons */
+.carousel-caption .btn {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  font-weight: 600;
+}
+
+/* Carousel Controls */
+.carousel-control-prev, 
+.carousel-control-next {
+  filter: none; /* Remove invert if background is dark */
+  opacity: 1; /* Ensure they are fully visible */
+  color: var(--gold); /* Use your theme's gold color */
+}
+
+.carousel-control-prev:hover, 
+.carousel-control-next:hover {
+  opacity: 1;
+  color: var(--light-gold); /* Slight change for hover effect */
+}
+.join-section{
+  background:linear-gradient(right,#b99a45,#C7AE6A) ;
+}
+/* About Page Section */
+/* ===== About Page Styling ===== */
+.about-section {
+  background: var(--background-color); /* Dark gray background */
+  padding: 5rem 0;
+  text-align: center;
+  color: var(--text-color); /* Keeping text darker */
+}
+
+/* About Section Heading */
+.about-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Flexbox for layout */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+/* About Image Styling */
+.about-image {
+  flex: 1;
+  max-width: 450px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  border: 3px solid var(--gold);
+}
+
+/* About Text Content */
+.about-content {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Subheading */
+.about-content h3 {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Paragraph */
+.about-content p {
+  font-size: 1.2rem;
+  color: var(--text-color); /* Darker text */
+  line-height: 1.8;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Call-to-Action Button */
+.about-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: var(--gold);
+  color: var(--black);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.about-btn:hover {
+  background: var(--light-gold);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-content {
+      text-align: center;
+  }
+}
+
+/* ===== About Page Hero Section ===== */
+.about-hero-section {
+  background: var(--dark-gradient);
+  position: relative;
+  padding: 6rem 0;
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
+}
+
+.about-hero-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* About Hero Heading */
+.about-hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1rem;
+}
+
+/* About Hero Paragraph */
+.about-hero-section p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* Decorative Underline */
+.about-hero-section h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 10px auto 0;
+  border-radius: var(--border-radius);
+}
+
+/* Hero Button */
+.about-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: var(--gold);
+  color: var(--black);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.about-btn:hover {
+  background: var(--light-gold);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-hero-section {
+      padding: 5rem 0;
+  }
+  .about-hero-section h1 {
+      font-size: 3rem;
+  }
+  .about-hero-section p {
+      font-size: 1.2rem;
+  }
+}
+/* Testimonials Section */
+/* Testimonials Section */
+.testimonials-section {
+  background: var(--dark-gray); /* Solid dark background */
+  padding: 6rem 0;
+  text-align: center;
+}
+
+/* Section Title */
+.testimonials-section h2 {
+  color: var(--gold);
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Testimonial Card */
+.testimonial {
+  background: var(--medium-gray); /* Solid background for clarity */
+  border: 2px solid var(--gold);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  max-width: 600px;
+  margin: 2rem auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Quote Symbol */
+.testimonial::before {
+  content: "“";
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--gold);
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  opacity: 0.9;
+}
+
+/* Testimonial Text */
+.testimonial p {
+  font-size: 1.3rem;
+  color: var(--off-white);
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* Author Details */
+.testimonial h5 {
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.testimonial span {
+  font-size: 1rem;
+  color: var(--muted-text);
+  font-style: italic;
+}
+
+/* Profile Image */
+.testimonial img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid var(--gold);
+  margin-top: 1.5rem;
+}
+
+/* Carousel Styling */
+.testimonial-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+/* Carousel Buttons */
+.carousel-control-prev, 
+.carousel-control-next {
+  color: var(--gold);
+  font-size: 2rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control-prev:hover, 
+.carousel-control-next:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.testimonials-section {
+  background-color: var(--medium-gray); /* Or use var(--dark-gray) */
+}
+.testimonial p, .testimonial h5, .testimonial span {
+  color: var(--off-white); /* Lighter text for visibility */
+}
+.testimonial-card {
+  background-color: var(--medium-gray); /* Ensure background isn't too light */
+  color: var(--off-white); /* Light text for contrast */
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-card p,
+.testimonial-card h5,
+.testimonial-card span {
+  color: var(--off-white); /* Ensure all text inside the card is visible */
+}
+.testimonial p {
+  color: var(--text-color); /* Ensures maximum contrast */
+}
+
+.testimonial h5 {
+  color: var(--light-gold); /* Slightly lighter for better readability */
+}
+
+.testimonial span {
+  color: var(--off-white); /* Increased contrast */
+}
+/* Gallery Section Styling */
+.gallery-section {
+  padding: 4rem 0;
+  text-align: center;
+  background: var(--background-color);
+}
+
+/* Grid Item Styling */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensuring Uniform Image Sizes */
+.gallery-img {
+  width: 100%;
+  height: 300px;  /* Set a fixed height */
+  object-fit: cover;  /* Ensures consistent cropping */
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;  /* Removes any extra spacing */
+}
+
+/* Responsive Image Grid Adjustments */
+@media (max-width: 992px) {
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Modal Image Styling */
+.modal-img {
+  width: 100%;
+  max-height: 80vh; /* Prevents oversized images */
+  object-fit: contain;
+}
+
+/* Modal Customization */
+.modal-content {
+  background-color: transparent; /* Removes background */
+  border: none;
+}
+
+/* Center the Modal */
+.modal-dialog {
+  max-width: 80%;
+}
+/* Contact Form Styling */
+/* Contact Page Styling */
+.contact-container {
+  max-width: 900px;
+}
+
+/* Restrict card styling to only the contact section */
+.contact-container .card {
+  border-radius: 10px;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+/* Restrict button styling */
+.contact-container .btn-primary {
+  width: 100%;
+  background-color: #007bff;
+  border: none;
+}
+
+.contact-container .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Google Maps Styling (Only for Contact Page) */
+.contact-container iframe {
+  border-radius: 10px;
+}
+/* .contact-container .card {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.contact-container .ratio iframe {
+  border-radius: 12px;
+}
+      /* Reduce overall card size */
+      .featured-section .small-card {
+        height: 450px; /* Adjust card height */
+        font-size: 14px; /* Smaller text */
+      }
+    
+      /* Smaller images with fixed height */
+      .featured-section .small-img {
+        height: 300px; /* Reduced image height */
+        object-fit: cover;
+      }
+    
+      /* Smaller buttons */
+      .featured-section .btn-sm {
+        padding: 4px 8px;
+        font-size: 12px;
+      }
+      .team-section .team-card {
+        height: 320px; /* Set a fixed height */
+      }
+    
+      .team-section .team-card .card-body {
+        padding: 10px; /* Reduce padding */
+      }
+    
+      .team-section .team-card .card-text {
+        font-size: 14px; /* Reduce text size */
+        max-height: 45px; /* Limit text height */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    
+      .team-section .social-icons a {
+        font-size: 14px; /* Reduce icon size */
+      }
+      .text-muted {
+        color: #6f6666 !important;  /* Darker gray */
+    }
+    @media (max-width: 768px) {
+      .carousel-caption {
+          font-size: 0.9rem; /* Reduce font size */
+          bottom: 20px; /* Move caption higher */
+          padding: 10px;
+      }
+      .carousel-caption h1 {
+          font-size: 1.5rem; /* Reduce heading size */
+      }
+      .carousel-caption p {
+          font-size: 1rem;
+      }
+  }
+  
+  
